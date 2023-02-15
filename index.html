@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title> <!-- title of the webpage -->
+    
+</head>
+<body>
+<div> <!-- creating division of various contents and portions of the webpage -->
+  <div>
+ <!-- Creating tables -->           
+    <table class="table">
+      <tr class="table-row">
+        <td>
+            <form onsubmit="event.preventDefault(); onFormSubmit();" > <!-- creating an event of submitting the form data-->
+                <div>
+                    <h2>Add Employee Details</h2>
+                    <p>Please fill  this form to create a Record.</p>
+                    <hr>
+                    <!-- creating the columns of employee details -->
+                    <label id="label" for="Name"><b>Name</b></label>
+                    <input type="text" placeholder="Enter Name" name="name" id="name" required >
+            
+                    <label id="label" for="Address"><b>Address</b></label>
+                    <input type="text" placeholder="Enter Address" name="city" id="city" required >
+            
+                    <label id="label" for="Emp-id"><b>Emp-id</b></label>
+                    <input type="number" placeholder="Enter Emp-id" name="empid" id="empid" required>
+
+                    <label id="label" for="Designation"><b>Designation</b></label>
+                    <input type="text" placeholder="Enter Designation" name="designation" id="designation" required >
+            
+                    <hr>
+            
+                    <!-- button creation for submitting the data given my the user -->
+                    <button type="submit" name="submit"class="registerbtn">Submit</button>
+                </div>
+            </form>
+        </td>
+       
+      </tr>
+    
+    </table>
+  </div>
+    <div> <!-- creating different division for tables where data will be stored and showed-->
+        <td>
+            <table  id="empList">
+                <h2>View & Edit All Employee details</h2>
+                <thead id="tab_head">
+                    <!-- showing the tables of recorded data and also option for edit or delete-->
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Emp-id</th>
+                            <th>Designation</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                </thead>
+               
+                <tbody id="tab_body">
+
+                </tbody>
+                
+            </table>
+        </td>
+    </div>
+</div>
+    <script src="Employee.js"></script> <!-- link the external javascript file -->
+</body>
+</html>
+
+<!-- ------------------------------------------------ -->
